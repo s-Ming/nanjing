@@ -1,0 +1,15 @@
+.banner {
+  // height:320px;
+  .ant-carousel .slick-slide {
+    text-align: center;
+    // height: 320px;
+    // line-height: 320px;
+    background: #364d79;
+    overflow: hidden;
+  }
+
+  .ant-carousel .slick-slide img {
+    width:100%;
+    color: #eee;
+  }
+}

@@ -1,1 +1,6 @@
 @import "./styles/reset.scss"; //重置样式
+@import "./styles/font/css/font-awesome.css"; //小图标样式
+@import "./src/styles/index/Zheader.scss"; //首页头部样式
+@import "./src/styles/index/Znav.scss"; //首页导航样式
+@import "./src/styles/index/Zbanner.scss"; //首页导航样式
+@import '~antd/dist/antd.css';//antd样式文件

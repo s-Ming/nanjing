@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.13.3",
     "less-loader": "^4.1.0",
     "node-less": "^1.0.0",
     "node-sass": "^4.11.0",

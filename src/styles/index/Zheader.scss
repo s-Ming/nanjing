@@ -1,0 +1,109 @@
+.header {
+  .container {
+    .header_left {
+      float: left;
+      img {
+        width: 209px;
+        height: 57px;
+        padding: 0 10px 0 10px;
+        margin: 30px 0;
+      }
+    }
+    .header_right {
+      width: 545px;
+      float: right;
+      padding-top: 14px;
+      .header_r_top {
+        padding-bottom: 10px;
+        img {
+          width: 94px;
+          height: 23px;
+          float: left;
+        }
+        .header_top_ul {
+          float: left;
+          li {
+            float: left;
+            height: 16px;
+            span {
+              font-size: 12px;
+              padding: 0 8px;
+              border-right: 1px solid #ccc;
+            }
+          }
+          li:last-child span {
+            border: none;
+          }
+        }
+      }
+      .header_r_bot {
+        .search {
+          float: left;
+          input {
+            width: 263px;
+            height: 40px;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+          }
+          input:focus {
+            //设置聚焦属性
+            border: 2px solid blue;
+            &::placeholder {
+              color: red;
+            }
+          }
+
+          button {
+            width: 58px;
+            height: 40px;
+            cursor: pointer;
+          }
+        }
+        .liebiao {
+          float: left;
+          margin-left: 20px;
+
+          h3 {
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            width: 146px;
+            background: #f26025;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            i {
+              width: 16px;
+              padding: 0 10px;
+              line-height: 16px;
+              height: 16px;
+            }
+            .header_bot_ul {
+              display: none;
+              z-index: 999;
+              position: relative;
+              li {
+                font-size: 14px;
+                background: #f26025;
+                border-top: 1px solid #fff;
+                padding: 0 18px;
+                height: 34px;
+                line-height: 34px;
+                height: 34px;
+                width: 100%;
+                cursor: pointer;
+                
+              }
+            }
+          }
+
+          &:hover .header_bot_ul {
+            //需要使用&符号
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
