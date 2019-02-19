@@ -1,7 +1,7 @@
 // 首页头部组件
 import React, { Component } from "react";
 import { connect } from "react-redux";
-class Zheader extends Component {
+class Znav extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -233,7 +233,7 @@ class Zheader extends Component {
       ]
     };
     this.props = props;
-    console.log(this.props);
+    // console.log(this.props);
   }
   render() {
     return (
@@ -292,14 +292,14 @@ class Zheader extends Component {
 }
 export default connect(
   state => {
-    console.log(state);
+    // console.log(state);
     return state;
   },
   dispatch => {
     return {
       setName() {
         //这个方法需手动触发 this.props.setName()
-        console.log(this.props);
+        // console.log(this.props);
         dispatch({
           // 对应switch里面的case
           type: "setName",
@@ -308,4 +308,4 @@ export default connect(
       }
     };
   }
-)(Zheader);
+)(Znav);

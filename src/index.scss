@@ -4,3 +4,8 @@
 @import "./src/styles/index/Znav.scss"; //首页导航样式
 @import "./src/styles/index/Zbanner.scss"; //首页导航样式
 @import '~antd/dist/antd.css';//antd样式文件
+@import "./src/styles/index/Zmain.scss"; //首页主要样式
+@import "./src/styles/index/Zhot.scss"; //首页热点样式
+@import "../node_modules/swiper/dist/css/swiper.css";//swiper样式
+@import "./src/styles/index/Znews.scss"; //首页新闻样式
+@import "./src/styles/index/Zfooter.scss"; //首页底部样式

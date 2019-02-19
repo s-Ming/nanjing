@@ -8,7 +8,7 @@ class Zheader extends Component {
       imgurl: ["imgs/index/logo.jpg", "imgs/index/logo_right.jpg"]
     };
     this.props = props;
-    console.log(this.props);
+    // console.log(this.props);
   }
   render() {
     return (
@@ -43,7 +43,8 @@ class Zheader extends Component {
             <div className="header_r_bot clearfix">
               <div className="search">
                 <input type="text" placeholder="请输入关键字" />
-                <button>搜素</button>
+                <button onTouchStart={this.touchstart.bind(this)}
+                >搜素</button>
               </div>
               <div className="liebiao">
                 <h3>
@@ -66,17 +67,22 @@ class Zheader extends Component {
   componentDidMount() {
     // this.props.setName();//修改仓库的值
   }
+  touchstart(e){//测试
+    e.target.classList.add("active");
+    // alert(666)
+  }
+  
 }
 export default connect(
   state => {
-    console.log(state);
+    // console.log(state);
     return state;
   },
   dispatch => {
     return {
       setName() {
         //这个方法需手动触发 this.props.setName()
-        console.log(this.props);
+        // console.log(this.props);
         dispatch({
           // 对应switch里面的case
           type: "setName",
