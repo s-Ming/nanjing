@@ -214,7 +214,17 @@ class Znews extends Component {
         return "";
       }
     });
+    this.state.list2.map((item, idx) => {
+      if (item.show) {
+        return this.setState({
+          showList2: item.child
+        });
+      } else {
+        return "";
+      }
+    });
   }
+  
 }
 export default connect(
   state => {

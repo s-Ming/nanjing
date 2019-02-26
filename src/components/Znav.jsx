@@ -8,6 +8,7 @@ class Znav extends Component {
       text: [
         {
           title: "个人金融",
+          path:'/people',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -40,6 +41,7 @@ class Znav extends Component {
         },
         {
           title: "小微金融",
+          path:'/xiaowei',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -72,6 +74,7 @@ class Znav extends Component {
         },
         {
           title: "公司金融",
+          path:'/gongsi',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -104,6 +107,7 @@ class Znav extends Component {
         },
         {
           title: "金融市场",
+          path:'/',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -136,6 +140,7 @@ class Znav extends Component {
         },
         {
           title: "电子银行",
+          path:'/',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -168,6 +173,7 @@ class Znav extends Component {
         },
         {
           title: "你好银行",
+          path:'/',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -200,6 +206,7 @@ class Znav extends Component {
         },
         {
           title: "关于我行",
+          path:'/',
           child: {
             img: "imgs/index/lllll.jpg",
             yewu: [
@@ -239,12 +246,12 @@ class Znav extends Component {
     return (
       <div className="nav">
         <div className="container clearfix">
-          <h3 className="nav_h3">首页</h3>
+          <h3 className="nav_h3" onClick={this.goPath.bind(this,'/')}>首页</h3>
           <ul className="nav_ul clearfix">
             {this.state.text.map((item, idx) => {
               return (
                 <li key={idx}>
-                  <h4>{item.title}</h4>
+                  <h4 onClick={this.goPath.bind(this,item.path)}>{item.title}</h4>
                   {
                     <div className="nav_li_child">
                       <div className="nav_left">
@@ -288,6 +295,9 @@ class Znav extends Component {
 
   componentDidMount() {
     // this.props.setName();//修改仓库的值
+  }
+  goPath(path){
+    this.props.history.push(path);
   }
 }
 export default connect(
